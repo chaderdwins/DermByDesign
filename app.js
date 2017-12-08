@@ -11,9 +11,8 @@ var bodyParser      = require("body-parser"),
     LocalStrategy         = require("passport-local"),
     passportLocalMongoose = require("passport-local-mongoose");
 
-//
-mongoose.connect("mongodb://kingBee:PhyAZ39V!@ds033196.mlab.com:33196/derm_by_design");
-//mongoose.connect("mongodb://localhost/restful_blog_app"); //local DB
+
+mongoose.connect("mongodb://localhost/restful_blog_app"); //local DB
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
