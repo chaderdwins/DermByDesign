@@ -1,0 +1,140 @@
+<% include ./partials/header %>
+        <ul id="img" class="slideshow">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li id="box">
+			            <h1 id="banner">
+			                All Things Skin
+			            </h1>
+			
+			            <%for(var i = 0; i < 1; i++){ %>
+			            <a href="/blogs/<%=blogs[i]._id%>" class="big basic ui inverted button">
+			                Latest Post
+			            </a>
+                        <% } %> 
+		    </li>
+		</ul>
+		
+    <p id="spacer2"> </p>
+<div class="ui container">
+    <h1 id="articles" class="ui horizontal divider header">
+        Articles
+    </h1>  
+</div>
+
+
+<div id="cardPad" class="ui container">
+    <div class="ui linked centered cards">
+        <% blogs.forEach(function(blog){ %>
+            <div class="card">
+                <div class="item">
+                    <div class="ui centered medium image">
+                        <img src="<%=blog.image%>"></img>
+                    </div>
+                    <p class="summary"></p>
+                    <div class="content">
+                        <h1 id="paddingCard" class="center aligned header" href="/blogs/<%=blog._id%>">
+                            <%=blog.title%>
+                        </h1>
+                        <p class="summary"></p>
+                        <div class="center aligned meta">
+                            <span id="paddingCard"><%= blog.created.toDateString() %></span>
+                        </div>
+                        <p class="summary"></p>
+                        <div class="center aligned description">
+                            <p id="paddingCard"><%-blog.body.substring(0,100)%>...</p>
+                        </div>
+                        <div class="extra">
+                            <a id="contentButton" class="ui fluid basic yellow button" href="/blogs/<%=blog._id%>">
+                                Read More
+                                <i class="right chevron small icon"></i>
+                            </a>
+                            <p class="summary"></p>
+                            <p class="summary"></p>
+                        </div>
+                    </div> <!--end content-->
+                </div>
+            </div>
+        <% }); %>
+            
+    </div>
+</div>
+
+
+    <p id="spacer1"> </p>
+
+
+<div id="striped" class="ui raised segment">
+    <div id="hideIt" class="ui middle aligned stackable grid container">
+      <div id="holy" class="row">
+        <div id="hideIt" class="six wide floated column">
+          <img id="sara" src="https://i.imgur.com/dihsEgY.jpg" class="ui middle aligned rounded image">
+        </div>
+        <div id="hideIt" class="one wide column">
+        </div>
+        <div id="hideIt" class="eight wide left top aligned column">
+            <h2 id="hideIt" class="ui horizontal divider header">
+                My Story
+            </h2>
+          <p id="hideIt">
+              Nibh nisl condimentum id venenatis. Nulla facilisi etiam dignissim diam quis. Et tortor at risus viverra adipiscing at in tellus integer. Enim sed faucibus turpis in. Libero justo laoreet sit amet cursus. Amet mattis vulputate enim nulla.
+          </p >
+          <p id="hideIt">
+              Nibh nisl condimentum id venenatis. Nulla facilisi etiam dignissim diam quis. Et tortor at risus viverra adipiscing at in tellus integer. Enim sed faucibus turpis in. Libero justo laoreet sit amet cursus. Amet mattis vulputate enim nulla.
+          </p>
+          <p id="hideIt">
+              Nibh nisl condimentum id venenatis. Nulla facilisi etiam dignissim diam quis. Et tortor at risus viverra adipiscing at in tellus integer. Enim sed faucibus turpis in. Libero justo laoreet sit amet cursus. Amet mattis vulputate enim nulla.
+          </p>
+          <p id="hideIt">
+              Nibh nisl condimentum id venenatis. Nulla facilisi etiam dignissim diam quis. Et tortor at risus viverra adipiscing at in tellus integer. Enim sed faucibus turpis in. Libero justo laoreet sit amet cursus. Amet mattis vulputate enim nulla.
+          </p>
+          <p id="hideIt">
+              Nibh nisl condimentum id venenatis. Nulla facilisi etiam dignissim diam quis. Et tortor at risus viverra adipiscing at in tellus integer. Enim sed faucibus turpis in. Libero justo laoreet sit amet cursus. Amet mattis vulputate enim nulla.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<p id="spacer1"></p>
+
+<div id="hide" class="ui container"> 
+<h1 class="ui horizontal divider header">
+  <img class="ui tiny image"src="https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png"></img>
+  Latest Instagram Posts
+</h1>
+</div>
+
+
+<div id="hide" class="ui center aligned container"> 
+<div id="bitsalad" class="ui linked centered cards">
+</div>
+</div> 
+
+<p id="spacer1"></p>
+<!--<div class="ui container">
+<h2 class="ui icon header">
+  <i class="red heart icon"></i>
+  <div class="content">
+    <div class="sub header">
+        <h1 class="ui horizontal divider header">
+            All-Time Favorites
+        </h1>
+    </div>
+  </div>
+</h2>
+</div>
+
+<div class="ui center aligned container"> 
+<div id="tomato" class="ui linked centered cards">
+</div>
+</div> 
+
+<p id="spacer1"></p>
+<p id="spacer1"></p>
+-->
+<% include ./partials/footer %>

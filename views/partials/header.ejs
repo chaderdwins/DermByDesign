@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Derm By Design</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://s3.amazonaws.com/salad-spinner/salad-spinner.min.js"></script>
+        <script src="/script.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"></link>
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montez|Montserrat|GFS+Didot|Montserrat+Alternates:300" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css"></link>
+
+        
+    </head>
+<body>
+        <div id="titleContainer" class="ui center aligned container">
+            <h1 class="ui header">
+                <div class="content">
+                    <a id="title" href="/">DBYD</a>
+                    <div id="subSpace" class="sub header">
+                        <div id="mobileNav" class="ui secondary stackable menu" id="headerLogo">
+                                <a href="/" id="mobileNav" class="item">
+                                   Home
+                               </a>
+                            <% if(!currentUser){ %>
+                            <!--<a href="/login" class="item right">Admin Login</a>-->
+                               <a id="mobileNav" class="item">
+                                   Articles
+                               </a>
+                               <a id="mobileNav" class="item">
+                                   Friends
+                               </a>
+                               <a id="mobileNav" class="item">
+                                   About Me
+                               </a>
+                               <a id="mobileNav" class="item">
+                                   Products
+                               </a>
+                               <a id="mobileNav" class="item">
+                                   Services
+                               </a>
+                            <% } else { %>
+                                <a href="/blogs/new" class="item right">New Post</a>
+                                <a href="/register" class="item">Register</a>
+                                <a href="/logout" class="item">Logout</a>
+                            <% } %>
+                        </div> <!--end menu-->
+                        <div id="titleDivider" class="ui divider"></div>
+                    </div>
+                </div>
+            </h1>   <!--end header-->
+        </div>  <!--End Header Container-->
+
+<section>
+
